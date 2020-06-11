@@ -105,8 +105,7 @@ class WeightedDict:
                 yield self.min_key
 
         else:
-            for n in chain(self.lt, self.rt):
-                yield n
+            yield from chain(self.lt, self.rt)
 
     # Deletes an element by key.
     def remove(self, index):
